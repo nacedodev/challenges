@@ -1,0 +1,34 @@
+/*INPUT: EMPRESA , EMPLEADO , PROYECTO */
+/*OUTPUT: Rechacer objeto , devolviendo que empleado esta asignado a que proyecto */
+
+let empresa = {
+  nombre: 'elamigos SA',
+  tesoreria: 234182742,
+  empleados: [
+    {nombre: 'Jose', sueldo: 400},
+    {nombre: 'Pepe', sueldo: 350},
+    {nombre: 'Jaime', sueldo: 500}, //SUELDO EN EUROS / SEMANA
+  ],
+  proyectos: [
+    {nombre: 'suma de capitales',esfuerzo: 4,presupuesto: 5000, empleados: []}, //ESFUERZO EN SEMANAS / PERSONA
+    {nombre: 'Chapa y pintura', esfuerzo: 6, presupuesto: 10000, empleados: []},
+    {nombre: 'Lidar sensor', esfuerzo: 3, presupuesto: 12000, empleados: []},
+  ],
+}
+
+let empleado = empresa.empleados[0]
+let proyecto = empresa.proyectos[0]
+
+//asignar(empresa , empleado , proyecto)
+
+let asignar = (empleado, proyecto) => {
+  proyecto.empleados.push(empleado)
+}
+
+let empleado2 = empresa.empleados[1]
+let proyecto2 = empresa.proyectos[0]
+
+asignar(empleado , proyecto)
+asignar(empleado2 , proyecto2)
+
+console.log(empresa)
